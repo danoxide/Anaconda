@@ -57,13 +57,16 @@
 		</div>
 	</nav>
 
-	<?php if(!empty(site_meta('jumbotron_title')) && !empty(site_meta('jumbotron_text'))): ?>
+	<?php 
+		$jumbotron_title = site_meta('jumbotron_title');
+		$jumbotron_text  = site_meta('jumbotron_text');
+		
+		if(!empty($jumbotron_title) && !empty($jumbotron_text)):
+	?>
 	<div class="jumbotron">
 		<div class="container text-center">
-			<h1><?php echo site_meta('jumbotron_title', 'Anaconda Theme'); ?></h1>
-			<p>
-				<?php echo site_meta('jumbotron_text', 'Anaconda theme is very light and clear theme for Anchor CMS.<br>I recommend it for bloggers and programmers as default web page.'); ?>
-			</p>
+			<h1><?php echo $jumbotron_title; ?></h1>
+			<p><?php echo $jumbotron_text; ?></p>
 		</div>
 	</div>
 	<?php endif; ?>
