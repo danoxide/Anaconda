@@ -9,7 +9,7 @@
 					<h2><?php echo article_title(); ?></h2>
 					<div class="meta clearfix">
 						<p class="pull-left">
-							Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo article_date(); ?></time> by <?php echo article_author('real_name'); ?>.
+							Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo date(DATE_W3C, article_time()); ?></time> by <?php echo article_author('real_name'); ?>.
 						</p>
 
 						<div class="share-area pull-right">
