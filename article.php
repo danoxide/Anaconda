@@ -8,7 +8,7 @@
 					<h2><?php echo article_title(); ?></h2>
 					<div class="meta clearfix">
 						<p class="pull-left">
-							Posted on <time datetime="<?php echo article_date(); ?>"><?php echo article_date(); ?></time> by <?php echo article_author('real_name'); ?><?php if(user_authed()): ?> / <a href="<?php echo base_url('admin/posts/edit/' . article_id()); ?>">Edit</a><?php endif; ?>.
+							Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo article_date(); ?></time> by <?php echo article_author('real_name'); ?><?php if(user_authed()): ?> / <a href="<?php echo base_url('admin/posts/edit/' . article_id()); ?>">Edit</a><?php endif; ?>.
 						</p>
 
 						<div class="share-area pull-right">
